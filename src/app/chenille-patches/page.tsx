@@ -1,8 +1,15 @@
+import Image from "next/image";
 import SiteFooter from "@/components/sections/site-footer";
 import SiteHeader from "@/components/sections/site-header";
 import Container from "@/components/layout/container";
 import EmbroideredVersatileOptionsSection from "@/components/sections/embroidered-versatile-options-section";
 import EmbroideredWhyChooseSection from "@/components/sections/embroidered-why-choose-section";
+import ChenilleBackingBorderOptionsSection from "@/components/sections/chenille-backing-border-options-section";
+import ServiceTextureCtaSection from "@/components/sections/service-texture-cta-section";
+import PatchCoverageStylesSection from "@/components/sections/patch-coverage-styles-section";
+import ContactQuoteSection from "@/components/sections/contact-quote-section";
+import ServiceStorySplitSection from "@/components/sections/service-story-split-section";
+import TestimonialsSection from "@/components/sections/testimonials-section";
 
 export default function EmbroideredPatchesPage() {
   return (
@@ -24,7 +31,7 @@ export default function EmbroideredPatchesPage() {
                   Custom Embroidered Patches
                 </p>
 
-                <h1 className="mt-5 text-[32px] font-bold leading-[1.08] tracking-[-0.02em] text-[#FFFFFF] sm:text-[40px] lg:text-[46px]">
+                <h1 className="mt-5 text-[32px] font-[600] leading-[1.08] tracking-[-0.02em] text-[#FFFFFF] [font-family:var(--font-poppins)] sm:text-[40px] lg:text-[46px]">
                   Crafted with Detail,
                   <br />
                   Designed to Impress
@@ -47,11 +54,13 @@ export default function EmbroideredPatchesPage() {
               </div>
 
               <div className="relative mx-auto w-full max-w-[500px] lg:ml-auto lg:max-w-[500px]">
-                <img
+                <Image
                   src="/images/chenille/Hero.png"
                   alt="Custom embroidered patch designs"
                   className="h-auto w-full object-contain"
-                  loading="eager"
+                  width={500}
+                  height={500}
+                  priority
                 />
               </div>
             </div>
@@ -65,7 +74,44 @@ export default function EmbroideredPatchesPage() {
             "/images/chenille/3.png",
           ]}
         />
+        
         <EmbroideredWhyChooseSection />
+        <ChenilleBackingBorderOptionsSection />
+        <ServiceTextureCtaSection
+          eyebrow="Vibrant Textures"
+          title="Discover Our Premium Chenille Patch Designs"
+          paragraphs={[
+            <>
+              Soft, bold, and full of personality our <strong>custom chenille patches</strong> capture creativity
+              through color and texture. Each patch is carefully crafted using high-density yarns to create plush,
+              eye-catching designs ideal for varsity jackets, hoodies, and team apparel.
+            </>,
+            <>
+              From school logos to fashion statements, these <strong>chenille patches</strong> bring warmth,
+              nostalgia, and durability to every piece. Experience the perfect blend of comfort and creativity with
+              patches that truly stand out.
+            </>,
+          ]}
+          buttonText="Start Your Order"
+          buttonHref="#"
+          backgroundImageSrc="/images/chenille/Simpson.png"
+        />
+
+        <PatchCoverageStylesSection />
+        <ContactQuoteSection />
+
+        <ServiceStorySplitSection
+          title="The Craft and Creativity of Custom Chenille Patches"
+          subtitle="The Art and Craft of Perfectly Printed Patches"
+          paragraphs={[
+            "Chenille patches combine soft textures with bold colors to create eye-catching emblems full of character. Known for their classic varsity-style appeal, these patches are crafted with thick, plush yarns that make every design stand out. Whether showcasing school spirit, sports teams, or brand logos, custom chenille patches bring warmth and personality to every piece.",
+            "Their raised surface and intricate detailing make them perfect for jackets, hoodies, and letterman apparel. Built to last and designed to impress, chenille patches blend nostalgia with modern craftsmanship, making them a favorite among creatives and brands alike.",
+          ]}
+          imageSrc="https://custompatchmakers.ca/wp-content/uploads/2025/11/chenille_patches-lettercustom-copyrighted-removebg-preview.png"
+          imageAlt="Custom chenille patch collage"
+          backgroundImageSrc="/images/chenille/Simpson.png"
+        />
+        <TestimonialsSection />
       </main>
 
       <SiteFooter />

@@ -3,6 +3,7 @@ import SiteHeader from "@/components/sections/site-header";
 import Container from "@/components/layout/container";
 import EmbroideredVersatileOptionsSection from "@/components/sections/embroidered-versatile-options-section";
 import EmbroideredWhyChooseSection from "@/components/sections/embroidered-why-choose-section";
+import PatchCoverageStylesSection from "@/components/sections/patch-coverage-styles-section";
 
 export default function EmbroideredPatchesPage() {
   return (
@@ -59,6 +60,7 @@ export default function EmbroideredPatchesPage() {
         </section>
 
         <EmbroideredVersatileOptionsSection />
+        <PatchCoverageStylesSection />
         <EmbroideredWhyChooseSection />
       </main>
 
