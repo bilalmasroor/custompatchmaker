@@ -2,8 +2,14 @@ import Container from "../layout/container";
 
 export default function TrustStrip() {
   return (
-    <section className="border-b border-[#0B1C48]/15 bg-[#0B1C48] bg-[url('https://custompatchmakers.ca/wp-content/uploads/2025/10/Bg-Vector.webp')] bg-size-[460px_auto] bg-repeat py-7 sm:py-8">
-      <Container>
+    <section className="relative overflow-hidden border-b border-[#0B1C48]/15 py-7 sm:py-8">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/background.png')" }}
+      />
+      <div className="absolute inset-0 bg-[#0B1C48]/90" />
+
+      <Container className="relative z-10">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           <article className="flex min-h-48 items-center justify-between gap-3 rounded-md bg-[#F4F6F8] px-2.5 py-2 sm:min-h-52 sm:px-3.5 sm:py-3 lg:min-h-54 lg:px-4 lg:py-3.5">
             <div className="max-w-65">

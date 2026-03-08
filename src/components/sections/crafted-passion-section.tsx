@@ -18,10 +18,13 @@ function CheckCircleIcon() {
 export default function CraftedPassionSection() {
   return (
     <section className="relative overflow-hidden border-b border-[#0B1C48]/15 py-10 sm:py-12 lg:py-14">
-      <div className="absolute inset-0 bg-[url('https://custompatchmakers.ca/wp-content/uploads/2025/10/Bg-Vector.webp')] bg-size-[260px_auto] bg-repeat" />
-      <div className="absolute inset-0 bg-[#0B1C48]/92" />
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/bg1.webp')" }}
+      />
+      <div className="absolute inset-0 bg-[#0B1C48]/90" />
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 text-[#FFFFFF] [&_h2]:!text-[#FFFFFF] [&_p]:!text-[#FFFFFF]">
         <div className="mx-auto max-w-250 text-center text-[#FFFFFF]">
           <h2 className="text-[38px] font-semibold leading-[1.1] sm:text-[44px] lg:text-[58px]">
             Crafted with Passion, Made to Last
