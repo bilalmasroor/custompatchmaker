@@ -5,25 +5,25 @@ const steps = [
     title: "Submit your design",
     description:
       "Upload your designs, logos, or even a rough sketch. Choose your product, colors, size, and style to bring your ideas to life.",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2026/02/istockphoto-1497794115-612x612-1.jpg",
+    image: "/images/home/order1.png",
   },
   {
     title: "Approve Your Proof",
     description:
       "Collaboration is key: Our designers will create a digital proof. Tell us what you think, and we'll work together until you love it.",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2026/02/ssss.webp",
+    image: "/images/home/order2.png",
   },
   {
     title: "The Wait is Almost Over",
     description:
       "With your approval in hand, our production team will meticulously bring your custom product to life.",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2026/02/external-Processing-web-smashingstocks-hand-drawn-black-smashing-stocks-2.jpg",
+    image: "/images/home/order3.png",
   },
   {
     title: "Unbox and Enjoy",
     description:
       "The moment you've been waiting for has arrived! We'll deliver your top-notch custom product to you in no time, free of charge.",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2025/10/100-percent.avif",
+    image: "/images/home/order4.png",
   },
 ];
 

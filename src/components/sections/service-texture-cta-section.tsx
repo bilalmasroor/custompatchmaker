@@ -19,7 +19,7 @@ export default function ServiceTextureCtaSection({
   backgroundImageSrc,
 }: ServiceTextureCtaSectionProps) {
   return (
-    <section className="relative overflow-hidden border-b border-[#7A1119] py-14 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden border-b border-[#7A1119] py-16 sm:py-24 lg:py-28">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${backgroundImageSrc})` }}
