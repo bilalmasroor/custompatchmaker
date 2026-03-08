@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary-navy: #0b1c48;
+  --color-accent-red: #c91a25;
+  --color-white: #ffffff;
+  --color-light-grey: #f4f6f8;
+  --color-dark-charcoal: #2b2b2b;
+  --color-highlight-yellow: #f2b705;
+
+  --background: var(--color-white);
+  --foreground: var(--color-dark-charcoal);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-navy: var(--color-primary-navy);
+  --color-brand-red: var(--color-accent-red);
+  --color-brand-white: var(--color-white);
+  --color-brand-grey: var(--color-light-grey);
+  --color-brand-charcoal: var(--color-dark-charcoal);
+  --color-brand-yellow: var(--color-highlight-yellow);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-primary-navy);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 40px !important;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+a {
+  color: var(--color-primary-navy);
+}
+
+a:hover {
+  color: var(--color-accent-red);
+}
