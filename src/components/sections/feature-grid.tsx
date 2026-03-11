@@ -96,20 +96,20 @@ export default function FeatureGrid() {
           {patchCards.map((patch) => (
             <article
               key={patch.title}
-              className="flex min-h-68 flex-col items-center rounded-xs border border-[#0B1C48]/15 bg-[#FFFFFF] px-3.5 pb-4.5 pt-3.5 text-center"
+              className="flex aspect-square w-full flex-col items-center justify-center rounded-xs border border-[#0B1C48]/15 bg-[#FFFFFF] px-5 pb-7 pt-6 text-center sm:px-6 sm:pb-8 sm:pt-7"
             >
               <a href={patch.href ?? "#"} className="inline-block" aria-label={patch.title}>
                 <img
                   src={patch.image}
                   alt={patch.alt}
-                  className="h-29 w-29 border border-[#C91A25] object-cover p-0.5"
+                  className="h-[172px] w-[172px] border border-[#C91A25] object-cover p-0.5 sm:h-[192px] sm:w-[192px]"
                 />
               </a>
 
-              <h3 className="mt-3 text-[27px] font-semibold leading-[1.2] text-[#0B1C48]">
+              <h3 className="mt-5 text-[27px] font-semibold leading-[1.2] text-[#0B1C48]">
                 <a href={patch.href ?? "#"}>{patch.title}</a>
               </h3>
-              <p className="mt-2 text-[12px] leading-[1.45] text-[#2B2B2B]">{patch.description}</p>
+              <p className="mt-3 max-w-[300px] text-[12px] leading-[1.45] text-[#2B2B2B]">{patch.description}</p>
             </article>
           ))}
         </div>
