@@ -15,7 +15,7 @@ function CheckCircleIcon() {
   );
 }
 
-export default function QualitySection() {
+export default function Quality() {
   return (
     <section className="relative overflow-hidden border-b border-[#0B1C48]/15 py-10 sm:py-12 lg:py-14">
       <div

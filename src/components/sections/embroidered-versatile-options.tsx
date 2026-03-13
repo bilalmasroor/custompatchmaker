@@ -88,7 +88,7 @@ function StyleRow({ item }: StyleRowProps) {
   );
 }
 
-export default function EmbroideredVersatileOptionsSection({
+export default function EmbroideredVersatileOptions({
   imageOverrides,
 }: EmbroideredVersatileOptionsSectionProps) {
   const resolvedStyleItems = styleItems.map((item, index) => ({

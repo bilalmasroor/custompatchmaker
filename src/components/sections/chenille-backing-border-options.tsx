@@ -102,7 +102,7 @@ const gridLayoutByCount: Record<number, string> = {
   4: "max-w-[1080px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
 };
 
-export default function ChenilleBackingBorderOptionsSection() {
+export default function ChenilleBackingBorderOptions() {
   const [activeTabKey, setActiveTabKey] = useState<OptionTab["key"]>("backing");
 
   const activeTab = useMemo(
@@ -111,12 +111,28 @@ export default function ChenilleBackingBorderOptionsSection() {
   );
 
   return (
-    <section className="border-b border-[#D9D9D9] bg-[#ECECEC] py-14 sm:py-16 lg:py-[82px]">
+    <section className="border-b border-[#0B1C48]/15 bg-[#F4F6F8] py-12 sm:py-16">
       <Container>
         <div className="mx-auto max-w-[1120px]">
-          <h2 className="text-center text-[34px] font-semibold leading-[1.15] tracking-[-0.01em] text-[#7B0F14] sm:text-[42px] lg:text-[48px]">
-            Backing and Border Options
-          </h2>
+          <div className="text-center">
+            <div className="relative inline-block px-2">
+              <h3 className="text-[14px] font-semibold tracking-wider uppercase leading-none text-[#C91A25]">
+                Chenille Finishing
+              </h3>
+              <svg
+                viewBox="0 0 500 150"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+                className="mt-1 h-2.5 w-full fill-none stroke-[#F2B705]"
+              >
+                <path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" strokeWidth="16" />
+              </svg>
+            </div>
+
+            <h2 className="mt-4 text-[32px] font-bold leading-[1.2] text-[#0B1C48] sm:text-[40px]">
+              Backing and Border Options
+            </h2>
+          </div>
 
           <div className="mt-7 flex flex-wrap justify-center gap-[10px]" role="tablist" aria-label="Backing and border options tabs">
             {optionTabs.map((tab) => {
@@ -130,10 +146,10 @@ export default function ChenilleBackingBorderOptionsSection() {
                   id={tabId}
                   type="button"
                   onClick={() => setActiveTabKey(tab.key)}
-                  className={`inline-flex h-[56px] min-w-[200px] items-center justify-center border px-6 text-center text-[19px] leading-none transition-colors sm:min-w-[240px] ${
+                  className={`inline-flex min-h-[54px] min-w-[180px] items-center justify-center rounded-full border px-[24px] text-center text-[15px] font-semibold leading-none transition-colors sm:min-w-[220px] ${
                     isActive
-                      ? "border-[#97090E] bg-[#97090E] font-semibold text-[#FFFFFF]"
-                      : "border-[#E3E3E3] bg-[#ECECEC] font-normal text-[#DF121D] hover:bg-[#F2F2F2]"
+                      ? "border-[#C91A25] bg-[#C91A25] text-[#FFFFFF]"
+                      : "border-[#0B1C48]/15 bg-[#FFFFFF] text-[#0B1C48] hover:border-[#C91A25]/30 hover:text-[#C91A25]"
                   }`}
                   role="tab"
                   aria-selected={isActive}
@@ -145,7 +161,7 @@ export default function ChenilleBackingBorderOptionsSection() {
             })}
           </div>
 
-          <p className="mx-auto mt-8 max-w-[860px] text-center text-[21px] leading-[1.35] text-[#1F1F1F] sm:text-[24px]">
+          <p className="mx-auto mt-6 max-w-3xl text-center text-[14px] leading-relaxed text-[#2B2B2B] sm:text-[15px]">
             {activeTab.description}
           </p>
 
@@ -156,8 +172,8 @@ export default function ChenilleBackingBorderOptionsSection() {
             className={`mx-auto mt-10 grid gap-5 ${gridLayoutByCount[activeTab.cards.length]}`}
           >
             {activeTab.cards.map((card) => (
-              <article key={card.title} className="min-h-[430px] bg-[#F2F2F2] p-[16px] pb-[14px]">
-                <div className="mx-auto aspect-square w-full max-w-[220px] overflow-hidden bg-[#F2F2F2]">
+              <article key={card.title} className="group min-h-[430px] rounded-2xl border border-[#0B1C48]/10 bg-[#FFFFFF] p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C91A25]/30 hover:shadow-xl">
+                <div className="mx-auto flex aspect-square w-full max-w-[220px] items-center justify-center overflow-hidden rounded-xl border border-[#C91A25]/20 bg-[#FFFFFF] p-2">
                   <img
                     src={card.imageSrc}
                     alt={card.imageAlt}
@@ -166,11 +182,11 @@ export default function ChenilleBackingBorderOptionsSection() {
                   />
                 </div>
 
-                <h3 className="mt-[14px] text-center text-[22px] font-semibold leading-[1.12] tracking-[-0.01em] text-[#7B0F14] sm:text-[30px]">
+                <h3 className="mt-5 text-[22px] font-bold leading-tight text-[#0B1C48] sm:text-[24px]">
                   {card.title}
                 </h3>
 
-                <p className="mt-[10px] text-center text-[17px] leading-[1.42] text-[#272727] sm:text-[20px]">
+                <p className="mt-3 text-[14px] leading-relaxed text-[#555555]">
                   {card.description}
                 </p>
               </article>

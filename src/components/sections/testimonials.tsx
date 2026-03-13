@@ -58,7 +58,7 @@ function ArrowRightIcon() {
   );
 }
 
-export default function ReviewsSection() {
+export default function Reviews() {
   const [startIndex, setStartIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(3);
 
@@ -98,7 +98,7 @@ export default function ReviewsSection() {
       <Container>
         <div className="mx-auto max-w-285">
           <div className="text-center">
-            <h2 className="relative inline-block px-1 text-[36px] font-semibold leading-none text-[#8A1116] sm:text-[42px] lg:text-[48px]">
+            <h2 className="relative inline-block px-1 text-[36px] font-semibold leading-none text-[#0b1c48] sm:text-[42px] lg:text-[48px]">
               What Our Customers Say
               <svg
                 viewBox="0 0 500 150"
@@ -128,7 +128,7 @@ export default function ReviewsSection() {
                 </p>
 
                 <div className="mt-auto pt-8">
-                  <h3 className="text-[16px] font-semibold leading-none text-[#8A1116]">{item.name}</h3>
+                  <h3 className="text-[16px] font-semibold leading-none text-[#0b1c48]">{item.name}</h3>
                   <p className="mt-2 text-[14px] leading-none text-[#6B6B6B]">{item.location}</p>
                 </div>
               </article>
@@ -140,7 +140,7 @@ export default function ReviewsSection() {
               type="button"
               onClick={onPrev}
               aria-label="Previous testimonial"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#C91A25] text-[#C91A25] transition-colors hover:bg-[#C91A25] hover:text-[#FFFFFF]"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#0b1c48] text-[#C91A25] transition-colors hover:bg-[#C91A25] hover:text-[#FFFFFF]"
             >
               <ArrowLeftIcon />
             </button>
@@ -148,7 +148,7 @@ export default function ReviewsSection() {
               type="button"
               onClick={onNext}
               aria-label="Next testimonial"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#C91A25] text-[#C91A25] transition-colors hover:bg-[#C91A25] hover:text-[#FFFFFF]"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#0b1c48] text-[#C91A25] transition-colors hover:bg-[#C91A25] hover:text-[#FFFFFF]"
             >
               <ArrowRightIcon />
             </button>

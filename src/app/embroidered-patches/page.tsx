@@ -1,9 +1,9 @@
 import SiteFooter from "@/components/sections/site-footer";
 import SiteHeader from "@/components/sections/site-header";
 import Container from "@/components/layout/container";
-import EmbroideredVersatileOptionsSection from "@/components/sections/embroidered-versatile-options-section";
-import EmbroideredWhyChooseSection from "@/components/sections/embroidered-why-choose-section";
-import PatchCoverageStylesSection from "@/components/sections/patch-coverage-styles-section";
+import EmbroideredVersatileOptions from "@/components/sections/embroidered-versatile-options";
+import EmbroideredWhyChoose from "@/components/sections/embroidered-why-choose";
+import PatchCoverageStyles from "@/components/sections/patch-coverage-styles";
 
 export default function EmbroideredPatchesPage() {
   return (
@@ -59,9 +59,9 @@ export default function EmbroideredPatchesPage() {
           </Container>
         </section>
 
-        <EmbroideredVersatileOptionsSection />
-        <PatchCoverageStylesSection />
-        <EmbroideredWhyChooseSection />
+        <EmbroideredVersatileOptions />
+        <PatchCoverageStyles />
+        <EmbroideredWhyChoose />
       </main>
 
       <SiteFooter />

@@ -2,64 +2,62 @@ import Image from "next/image";
 import SiteFooter from "@/components/sections/site-footer";
 import SiteHeader from "@/components/sections/site-header";
 import Container from "@/components/layout/container";
-import EmbroideredVersatileOptionsSection from "@/components/sections/embroidered-versatile-options-section";
-import EmbroideredWhyChooseSection from "@/components/sections/embroidered-why-choose-section";
-import ChenilleBackingBorderOptionsSection from "@/components/sections/chenille-backing-border-options-section";
-import ServiceTextureCtaSection from "@/components/sections/service-texture-cta-section";
-import PatchCoverageStylesSection from "@/components/sections/patch-coverage-styles-section";
-import ContactQuoteSection from "@/components/sections/contact-quote-section";
-import ServiceStorySplitSection from "@/components/sections/service-story-split-section";
-import TestimonialsSection from "@/components/sections/testimonials-section";
+import EmbroideredVersatileOptions from "@/components/sections/embroidered-versatile-options";
+import EmbroideredWhyChoose from "@/components/sections/embroidered-why-choose";
+import ChenilleBackingBorderOptions from "@/components/sections/chenille-backing-border-options";
+import ServiceTextureCta from "@/components/sections/service-texture-cta";
+import PatchCoverageStyles from "@/components/sections/patch-coverage-styles";
+import Contact from "@/components/sections/contact-quote";
+import ServiceStorySplit from "@/components/sections/service-story-split";
+import Reviews from "@/components/sections/testimonials";
 
-export default function EmbroideredPatchesPage() {
+export default function ChenillePatchesPage() {
   return (
     <div className="min-h-screen bg-[#FFFFFF] text-[#2B2B2B]">
       <SiteHeader />
 
       <main>
-        <section className="relative overflow-hidden border-b border-[#750A11] bg-[#980F18]">
-          <div className="pointer-events-none absolute inset-0">
-            <div className="absolute inset-0 bg-[#980F18]" />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.065)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.065)_1px,transparent_1px)] bg-size-[118px_118px,118px_118px] opacity-35" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),rgba(0,0,0,0.16))]" />
-          </div>
-
+        <section className="overflow-hidden border-b border-[#0B1C48]/15 bg-[#FFFFFF]">
           <Container>
-            <div className="relative z-10 grid min-h-[570px] items-center gap-8 py-12 sm:py-14 lg:grid-cols-[minmax(0,520px)_minmax(0,1fr)] lg:gap-4 lg:py-16">
-              <div className="max-w-[520px] text-white">
-                <p className="inline-flex rounded-[16px] border border-[#FFFFFF] px-[14px] py-[4px] text-[16px] font-semibold leading-none tracking-[-0.02em] text-[#FFFFFF] sm:text-[18px] md:text-[22px] lg:text-[26px]">
-                  Custom Embroidered Patches
+            <div className="grid min-h-[640px] items-center gap-10 py-[48px] sm:py-[64px] lg:grid-cols-[minmax(0,640px)_1fr] lg:gap-8 lg:py-[80px]">
+              <div className="max-w-[720px]">
+                <p className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C91A25] sm:text-[15px]">
+                  Custom Chenille Patches
                 </p>
 
-                <h1 className="mt-5 text-[32px] font-[600] leading-[1.08] tracking-[-0.02em] text-[#FFFFFF] [font-family:var(--font-poppins)] sm:text-[40px] lg:text-[46px]">
-                  Crafted with Detail,
+                <h1 className="mt-[18px] max-w-[700px] text-[38px] font-bold leading-[1.02] tracking-[-0.03em] text-[#0B1C48] sm:text-[48px] md:text-[56px] lg:text-[64px]">
+                  Crafted with Texture,
                   <br />
-                  Designed to Impress
+                  Made to Stand Out
                 </h1>
 
-                <p className="mt-6 max-w-[500px] text-[16px] leading-[1.42] text-[#FFFFFF] sm:text-[17px]">
-                  At <strong>Custom Patch Maker</strong>, we take pride in blending traditional embroidery techniques
-                  with modern precision to craft <strong>high-quality embroidered patches in Canada</strong>. Whether
-                  you need patches for uniforms, jackets, fashion apparel, or branding, each patch we produce is made
-                  to look sharp, feel premium, and last through every wear. Every thread tells your story, stitched
-                  with care, designed with purpose, and made to impress.
+                <p className="mt-[24px] max-w-[690px] text-[16px] leading-[30px] text-[#2B2B2B] sm:text-[17px]">
+                  Our <strong>custom chenille patches</strong> bring bold texture, rich colour, and a classic varsity
+                  feel to every design. From school emblems and team jackets to fashion statements and branded
+                  merchandise, each piece is crafted to look premium and last.
+                </p>
+
+                <p className="mt-[18px] max-w-[690px] text-[16px] leading-[30px] text-[#2B2B2B] sm:text-[17px]">
+                  We use high-quality yarns, durable backings, and expert finishing to create chenille patches that
+                  feel soft, wear well, and stand out from a distance. If you want depth, warmth, and impact, this is
+                  the patch style to choose.
                 </p>
 
                 <a
-                  href="#"
-                  className="mt-9 inline-flex h-[54px] items-center justify-center rounded-[4px] bg-[#FFFFFF] px-7 text-[16px] font-normal leading-none text-[#D0101E] transition hover:bg-[#F5F5F5] sm:px-8 sm:text-[18px] lg:px-9 lg:text-[20px]"
-                >
-                  Start Your Order
-                </a>
+  href="#"
+  className="mt-[34px] inline-flex min-h-[54px] items-center justify-center rounded-full bg-[#C91A25] px-[30px] text-[15px] font-semibold text-[#FFFFFF] transition-all duration-300 hover:bg-[#C91A25]/90 hover:text-[#FFFFFF]"
+>
+  Start Your Order
+</a>
               </div>
 
-              <div className="relative mx-auto w-full max-w-[500px] lg:ml-auto lg:max-w-[500px]">
+              <div className="relative mx-auto w-full max-w-[480px] lg:ml-auto lg:max-w-[520px]">
                 <Image
                   src="/images/chenille/Hero.png"
-                  alt="Custom embroidered patch designs"
+                  alt="Custom chenille patch designs"
                   className="h-auto w-full object-contain"
-                  width={500}
-                  height={500}
+                  width={520}
+                  height={520}
                   priority
                 />
               </div>
@@ -67,7 +65,7 @@ export default function EmbroideredPatchesPage() {
           </Container>
         </section>
 
-        <EmbroideredVersatileOptionsSection
+        <EmbroideredVersatileOptions
           imageOverrides={[
             "/images/chenille/1.png",
             "/images/chenille/2.png",
@@ -75,9 +73,9 @@ export default function EmbroideredPatchesPage() {
           ]}
         />
         
-        <EmbroideredWhyChooseSection />
-        <ChenilleBackingBorderOptionsSection />
-        <ServiceTextureCtaSection
+        <EmbroideredWhyChoose />
+        <ChenilleBackingBorderOptions />
+        <ServiceTextureCta
           eyebrow="Vibrant Textures"
           title="Discover Our Premium Chenille Patch Designs"
           paragraphs={[
@@ -97,10 +95,10 @@ export default function EmbroideredPatchesPage() {
           backgroundImageSrc="/images/chenille/Simpson.png"
         />
 
-        <PatchCoverageStylesSection />
-        <ContactQuoteSection />
+        <PatchCoverageStyles />
+        <Contact />
 
-        <ServiceStorySplitSection
+        <ServiceStorySplit
           title="The Craft and Creativity of Custom Chenille Patches"
           subtitle="The Art and Craft of Perfectly Printed Patches"
           paragraphs={[
@@ -111,7 +109,7 @@ export default function EmbroideredPatchesPage() {
           imageAlt="Custom chenille patch collage"
           backgroundImageSrc="/images/chenille/Simpson.png"
         />
-        <TestimonialsSection />
+        <Reviews />
       </main>
 
       <SiteFooter />

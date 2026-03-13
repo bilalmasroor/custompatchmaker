@@ -8,7 +8,7 @@ function PhoneIcon() {
   );
 }
 
-export default function ContactQuoteSection() {
+export default function ContactSection() {
   return (
     <section className="border-b border-[#0B1C48]/15 bg-[#F4F6F8] py-8 sm:py-10 lg:py-12">
       <Container>

@@ -1,19 +1,31 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Container from "../layout/container";
 
-export default function WhyChooseSection() {
+export default function WhyChoose() {
   return (
     <section className="border-b border-[#0B1C48]/15 bg-[#F4F6F8] py-8 sm:py-10 lg:py-12">
       <Container>
-        <div className="mx-auto grid max-w-268 grid-cols-1 items-start gap-6 lg:grid-cols-[502px_minmax(0,1fr)] lg:gap-8">
-          <div className="mx-auto w-full max-w-125.5">
-            <img
+        <div className="mx-auto grid max-w-268 grid-cols-1 items-start gap-6 md:grid-cols-[minmax(0,502px)_minmax(0,1fr)] md:gap-8 lg:gap-10">
+          <div className="mx-auto w-full max-w-125.5 md:mx-0">
+            <Image
               src="/images/home/Jacket.png"
               alt="Why Choose Custom Patch Makers?"
+              width={750}
+              height={651}
               className="h-auto w-full object-cover"
             />
           </div>
 
-          <div className="max-w-177.5 pt-2">
+          <motion.div
+            className="w-full max-w-177.5 pt-2"
+            initial={{ opacity: 0, x: -72 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 2.3, ease: [0.12, 0.9, 0.25, 1] }}
+          >
             <h2 className="text-[32px] font-semibold leading-[1.08] text-[#0B1C48] sm:text-[38px] lg:text-[50px]">
               Why Choose Custom
               <br />
@@ -38,7 +50,7 @@ export default function WhyChooseSection() {
               <li>Fast delivery anywhere in Canada</li>
               <li>Free quotes and fair, transparent pricing</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </section>

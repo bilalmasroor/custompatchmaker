@@ -30,7 +30,7 @@ export default function SiteHeader() {
       <Container>
         <div className="flex min-h-22 items-center justify-between gap-5">
           <a href="/" aria-label="Custom Patch Makers Home" className="flex items-center">
-            <img src="/images/logo.png" alt="Custom Patch Makers logo" className="h-14 w-auto object-contain sm:h-24" />
+            <img src="/images/logo.png" alt="Custom Patch Makers logo" className="h-14 w-auto object-contain sm:h-16" />
           </a>
 
           <div className="hidden lg:ml-auto lg:flex">

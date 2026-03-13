@@ -38,7 +38,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-primary-navy);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -76,6 +75,22 @@ a:hover {
   color: var(--color-accent-red);
 }
 
+:is(a, button)[class*="bg-[#C91A25]"],
+:is(a, button)[class*="bg-[#97090E]"],
+:is(a, button)[class*="bg-[#D0101E]"],
+:is(a, button)[class*="bg-[#8A1116]"],
+:is(a, button)[class*="bg-[#980F18]"] {
+  color: var(--color-white);
+}
+
+:is(a, button)[class*="bg-[#C91A25]"]:hover,
+:is(a, button)[class*="bg-[#97090E]"]:hover,
+:is(a, button)[class*="bg-[#D0101E]"]:hover,
+:is(a, button)[class*="bg-[#8A1116]"]:hover,
+:is(a, button)[class*="bg-[#980F18]"]:hover {
+  color: var(--color-white);
+}
+
 p {
   font-family: var(--font-plus-jakarta), Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -85,5 +100,20 @@ p {
 @media (min-width: 1024px) {
   p {
     font-size: 16px !important;
+  }
+}
+
+.benefits-loop-track {
+  animation: benefits-loop 18s linear infinite;
+  will-change: transform;
+}
+
+@keyframes benefits-loop {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.3333%);
   }
 }

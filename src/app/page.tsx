@@ -1,33 +1,34 @@
-import CustomDesignsSection from "@/components/sections/custom-designs-section";
-import CraftedPassionSection from "@/components/sections/crafted-passion-section";
-import ContactQuoteSection from "@/components/sections/contact-quote-section";
-import CollectionShowcaseSection from "@/components/sections/collection-showcase-section";
-import FaqSection from "@/components/sections/faq-section";
-import FeatureGrid from "@/components/sections/feature-grid";
-import HeroSection from "@/components/sections/hero-section";
-import ProductShowcase from "@/components/sections/product-showcase";
+
+import Quality from "@/components/sections/crafted-passion";
+import Contact from "@/components/sections/contact-quote";
+import Collection from "@/components/sections/collection-showcase";
+import BenefitsStrip from "@/components/sections/benefits-strip";
+import Faq from "@/components/sections/faq";
+import PatchTypes from "@/components/sections/feature-grid";
+import Hero from "@/components/sections/hero";
+import OrderProcess from "@/components/sections/product-showcase";
 import SiteFooter from "@/components/sections/site-footer";
 import SiteHeader from "@/components/sections/site-header";
-import TestimonialsSection from "@/components/sections/testimonials-section";
-import TrustStrip from "@/components/sections/trust-strip";
-import WhyChooseSection from "@/components/sections/why-choose-section";
+import Reviews from "@/components/sections/testimonials";
+import HighlightsStrip from "@/components/sections/trust-strip";
+import WhyChoose from "@/components/sections/why-choose";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#FFFFFF] text-[#2B2B2B]">
       <SiteHeader />
       <main>
-        <HeroSection />
-        <TrustStrip />
-        <FeatureGrid />
-        <ProductShowcase />
-        <WhyChooseSection />
-        <CustomDesignsSection />
-        <CraftedPassionSection />
-        <ContactQuoteSection />
-        <CollectionShowcaseSection />
-        <TestimonialsSection />
-        <FaqSection />
+        <Hero />
+        <BenefitsStrip />
+        <HighlightsStrip />
+        <PatchTypes />
+        <OrderProcess />
+        <WhyChoose />
+        <Quality />
+        <Contact />
+        <Collection />
+        <Reviews />
+        <Faq />
       </main>
       <SiteFooter />
     </div>

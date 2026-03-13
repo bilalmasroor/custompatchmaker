@@ -1,6 +1,10 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Container from "../layout/container";
 
-export default function TrustStrip() {
+export default function HighlightsStrip() {
   return (
     <section className="relative overflow-hidden border-b border-[#0B1C48]/15 py-7 sm:py-8">
       <div
@@ -11,47 +15,63 @@ export default function TrustStrip() {
 
       <Container className="relative z-10">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <article className="flex min-h-48 items-center justify-between gap-3 rounded-md bg-[#F4F6F8] px-2.5 py-2 sm:min-h-52 sm:px-3.5 sm:py-3 lg:min-h-54 lg:px-4 lg:py-3.5">
+          <motion.article
+            className="flex min-h-48 items-center justify-between gap-3 rounded-md bg-[#F4F6F8] px-2.5 py-2 sm:min-h-52 sm:px-3.5 sm:py-3 lg:min-h-54 lg:px-4 lg:py-3.5"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 1.05, ease: [0.22, 1, 0.36, 1] }}
+          >
             <div className="max-w-65">
-              <h2 className="!text-[28px] font-semibold leading-[1.06] text-[#C91A25] sm:!text-[28px] lg:!text-[28px]">
+              <h2 className="!text-[28px] font-semibold leading-[1.06] text-[#0b1c48] sm:!text-[28px] lg:!text-[28px]">
                 Customize Your
                 <br />
                 Perfect Patch
               </h2>
-              <p className="mt-3 text-[22px] font-normal leading-[1.2] text-[#2B2B2B] sm:text-[23px] lg:text-[24px]">
+              <p className="mt-3 text-[22px] font-normal leading-[1.2] text-[#0b1c48] sm:text-[23px] lg:text-[24px]">
                 Any Shape, Any Backing
               </p>
             </div>
 
             <div className="relative h-32 w-48 shrink-0 sm:h-36 sm:w-52 lg:mr-1 lg:h-40 lg:w-56">
-              <img
+              <Image
                 src="/images/home/Customize-1.png"
                 alt="Customize your patch"
-                className="h-full w-full object-contain"
+                fill
+                sizes="(min-width: 1024px) 224px, (min-width: 640px) 208px, 192px"
+                className="object-contain"
               />
             </div>
-          </article>
+          </motion.article>
 
-          <article className="flex min-h-48 items-center justify-between gap-3 rounded-md bg-[#F4F6F8] px-2.5 py-2 sm:min-h-52 sm:px-3.5 sm:py-3 lg:min-h-54 lg:px-4 lg:py-3.5">
+          <motion.article
+            className="flex min-h-48 items-center justify-between gap-3 rounded-md bg-[#F4F6F8] px-2.5 py-2 sm:min-h-52 sm:px-3.5 sm:py-3 lg:min-h-54 lg:px-4 lg:py-3.5"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 1.05, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
+          >
             <div className="max-w-66.25">
-              <h2 className="!text-[28px] font-semibold leading-[1.06] text-[#C91A25] sm:!text-[28px] lg:!text-[28px]">
+              <h2 className="!text-[28px] font-semibold leading-[1.06] text-[#0b1c48] sm:!text-[28px] lg:!text-[28px]">
                 Design Your Own
                 <br />
                 Custom Patches
               </h2>
-              <p className="mt-3 text-[22px] font-normal leading-[1.2] text-[#2B2B2B] sm:text-[23px] lg:text-[24px]">
+              <p className="mt-3 text-[22px] font-normal leading-[1.2] text-[#0b1c48] sm:text-[23px] lg:text-[24px]">
                 Unique, Creative, Durable
               </p>
             </div>
 
             <div className="relative h-32 w-48 shrink-0 sm:h-36 sm:w-52 lg:mr-1 lg:h-40 lg:w-56">
-              <img
+              <Image
                 src="/images/home/Customize-2.png"
                 alt="Design your custom patches"
-                className="h-full w-full object-contain"
+                fill
+                sizes="(min-width: 1024px) 224px, (min-width: 640px) 208px, 192px"
+                className="object-contain"
               />
             </div>
-          </article>
+          </motion.article>
         </div>
       </Container>
     </section>

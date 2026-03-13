@@ -48,7 +48,7 @@ function ArrowIcon({ open }: { open: boolean }) {
   );
 }
 
-export default function FaqSection() {
+export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (

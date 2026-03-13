@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Container from "../layout/container";
 
 const patchCards = [
@@ -62,28 +66,39 @@ const patchCards = [
   },
 ];
 
-export default function FeatureGrid() {
+export default function PatchTypes() {
+  const getCardDirection = (index: number) => {
+    if (index % 3 === 0) return "left";
+    if (index % 3 === 2) return "right";
+    return "none";
+  };
+
   return (
-    <section className="border-b border-[#0B1C48]/15 bg-[#F4F6F8] py-10 sm:py-12">
+    <section className="border-b border-[#0B1C48]/15 bg-[#F4F6F8] py-12 sm:py-16 overflow-hidden">
       <Container>
-        <div className="mx-auto mb-9 max-w-245 text-center">
+        <div className="mx-auto mb-12 max-w-4xl text-center">
           <div className="relative inline-block px-2">
-            <h3 className="text-[13px] font-semibold leading-none text-[#C91A25]">Type of Patches Available!</h3>
+            <h3 className="text-[14px] font-semibold tracking-wider uppercase leading-none text-[#0b1c48]">
+              Type of Patches Available!
+            </h3>
             <svg
               viewBox="0 0 500 150"
               preserveAspectRatio="none"
               aria-hidden="true"
-              className="mt-1 h-2.25 w-full fill-none stroke-[#F2B705]"
+              className="mt-1 h-2.5 w-full fill-none stroke-[#F2B705]"
             >
-              <path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" strokeWidth="16" />
+              <path
+                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"
+                strokeWidth="16"
+              />
             </svg>
           </div>
 
-          <h2 className="mt-2 text-[33px] font-semibold leading-[1.15] text-[#0B1C48] sm:text-[35px]">
+          <h2 className="mt-4 text-[32px] font-bold leading-[1.2] text-[#0B1C48] sm:text-[40px]">
             Design Your Own Custom Patches – Fast, Reliable, and High-Quality
           </h2>
 
-          <p className="mx-auto mt-3 max-w-245 text-[12px] leading-normal text-[#2B2B2B] sm:text-[13px]">
+          <p className="mx-auto mt-4 max-w-3xl text-[14px] leading-relaxed text-[#2B2B2B] sm:text-[15px]">
             From cycling and running teams to military units, organizations, and clubs, <strong>Custom Patch Makers</strong> has
             created custom designs to fit every purpose and style. Our collection includes <strong>custom embroidered
             patches</strong> for detailed artwork, <strong>iron-on patches</strong> for quick application, and <strong>Velcro patches</strong> for
@@ -92,26 +107,60 @@ export default function FeatureGrid() {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-245 grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
-          {patchCards.map((patch) => (
-            <article
-              key={patch.title}
-              className="flex aspect-square w-full flex-col items-center justify-center rounded-xs border border-[#0B1C48]/15 bg-[#FFFFFF] px-5 pb-7 pt-6 text-center sm:px-6 sm:pb-8 sm:pt-7"
-            >
-              <a href={patch.href ?? "#"} className="inline-block" aria-label={patch.title}>
-                <img
-                  src={patch.image}
-                  alt={patch.alt}
-                  className="h-[172px] w-[172px] border border-[#C91A25] object-cover p-0.5 sm:h-[192px] sm:w-[192px]"
-                />
-              </a>
+        <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {patchCards.map((patch, index) => {
+            const direction = getCardDirection(index);
 
-              <h3 className="mt-5 text-[27px] font-semibold leading-[1.2] text-[#0B1C48]">
-                <a href={patch.href ?? "#"}>{patch.title}</a>
-              </h3>
-              <p className="mt-3 max-w-[300px] text-[12px] leading-[1.45] text-[#2B2B2B]">{patch.description}</p>
-            </article>
-          ))}
+            const CardUI = () => (
+              <article className="group flex h-full w-full flex-col items-center rounded-2xl border border-[#0B1C48]/10 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C91A25]/30 hover:shadow-xl sm:p-8">
+                <a
+                  href={patch.href ?? "#"}
+                  className="relative mb-6 block shrink-0 overflow-hidden rounded-xl border border-[#C91A25]/20 p-1.5 transition-colors duration-300 group-hover:border-[#C91A25]"
+                  aria-label={patch.title}
+                >
+                  <Image
+                    src={patch.image}
+                    alt={patch.alt}
+                    width={192}
+                    height={192}
+                    className="h-44 w-44 rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 sm:h-48 sm:w-48"
+                  />
+                </a>
+
+                <div className="flex flex-1 flex-col justify-start">
+                  <h3 className="mb-3 text-[22px] font-bold leading-tight text-[#0B1C48] sm:text-[24px]">
+                    <a href={patch.href ?? "#"} className="transition-colors group-hover:text-[#C91A25]">
+                      {patch.title}
+                    </a>
+                  </h3>
+                  <p className="text-[14px] leading-relaxed text-[#555555]">
+                    {patch.description}
+                  </p>
+                </div>
+              </article>
+            );
+
+            return (
+              <motion.div
+                key={patch.title}
+                initial={{
+                  opacity: 0,
+                  x: direction === "left" ? -50 : direction === "right" ? 50 : 0,
+                  y: direction === "none" ? 20 : 0,
+                }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: false, margin: "-50px" }}
+                transition={{
+                  duration: 1.5,
+                  ease: [0.22, 1, 0.36, 1] as const,
+                  delay: Math.floor(index / 3) * 0.15,
+                }}
+                className="h-full"
+              >
+                <CardUI />
+              </motion.div>
+            );
+          })}
         </div>
       </Container>
     </section>
