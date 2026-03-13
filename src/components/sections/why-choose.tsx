@@ -23,7 +23,7 @@ export default function WhyChoose() {
             className="w-full max-w-177.5 pt-2"
             initial={{ opacity: 0, x: -72 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
+            viewport={{ once: false, amount: 0.35 }}
             transition={{ duration: 2.3, ease: [0.12, 0.9, 0.25, 1] }}
           >
             <h2 className="text-[32px] font-semibold leading-[1.08] text-[#0B1C48] sm:text-[38px] lg:text-[50px]">
