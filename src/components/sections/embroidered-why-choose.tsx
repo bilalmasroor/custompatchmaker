@@ -126,12 +126,11 @@ export default function EmbroideredWhyChoose() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              'url("https://custompatchmakers.ca/wp-content/uploads/2025/10/hero-section-slider-img-4.webp")',
+            backgroundImage: 'url("/images/bg2.png")',
           }}
         />
-        <div className="absolute inset-0 bg-[#0B1C48]/55" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1C48]/90 via-[#0B1C48]/78 to-[#0B1C48]/30" />
+        <div className="absolute inset-0 bg-[#0B1C48]/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1C48]/85 via-[#0B1C48]/78 to-[#0B1C48]/50" />
       </div>
 
       <Container>
@@ -142,7 +141,7 @@ export default function EmbroideredWhyChoose() {
           {/* Content */}
           <div>
             <motion.h2
-              className="text-[28px] font-medium leading-[1.1] text-white sm:text-[32px] lg:text-[32px]"
+              className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.1] text-white"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}

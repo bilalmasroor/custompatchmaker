@@ -3,7 +3,7 @@ import Container from "../layout/container";
 
 export default function Collection() {
   return (
-    <section className="border-b border-[#0B1C48]/15 bg-[#F4F6F8] py-8 sm:py-10 lg:py-12">
+    <section className="border-b border-[#0B1C48]/15 py-8 sm:py-10 lg:py-12">
       <Container>
         <div className="mx-auto max-w-255">
           <Image
@@ -16,7 +16,7 @@ export default function Collection() {
 
           <div className="mt-6 grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-8">
             <div className="lg:pr-6">
-              <h2 className="text-[28px] font-medium leading-[1.06] text-[#0B1C48] sm:text-[32px] lg:text-[32px]">
+              <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.06] text-[#0B1C48]">
                 Customized Patches for Every Style, Explore Our Collection
               </h2>
 
@@ -45,7 +45,7 @@ export default function Collection() {
             </div>
 
             <div className="lg:border-l lg:border-[#C91A25] lg:pl-7">
-              <h2 className="text-[28px] font-medium leading-[1.06] text-[#0B1C48] sm:text-[32px] lg:text-[32px]">
+              <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.06] text-[#0B1C48]">
                 Can’t Find the Right Product?
               </h2>
 

@@ -35,15 +35,6 @@ body {
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-poppins), Georgia, serif;
-}
-
 p {
   font-family: var(--font-plus-jakarta), Arial, Helvetica, sans-serif;
   font-style: normal;

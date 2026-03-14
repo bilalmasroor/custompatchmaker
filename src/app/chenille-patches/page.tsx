@@ -59,14 +59,19 @@ function HeroImage() {
       transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
     >
       <motion.div style={{ y, rotate }}>
-        <Image
-          src="/images/chenille/Hero.png"
-          alt="Custom chenille patch designs"
-          className="h-auto w-full object-contain drop-shadow-2xl"
-          width={520}
-          height={520}
-          priority
-        />
+        <motion.div
+          animate={{ y: [0, -12, 0, 12, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <Image
+            src="/images/chenille/Hero.png"
+            alt="Custom chenille patch designs"
+            className="h-auto w-full object-contain drop-shadow-2xl"
+            width={520}
+            height={520}
+            priority
+          />
+        </motion.div>
       </motion.div>
     </motion.div>
   );
@@ -79,17 +84,16 @@ export default function ChenillePatchesPage() {
 
       <main>
         {/* Hero */}
-        <section className="relative isolate overflow-hidden bg-[#7B1E23] text-[#FFFFFF]">
+        <section className="relative isolate overflow-hidden bg-[#0B1C48] text-[#FFFFFF]">
           <div aria-hidden="true" className="absolute inset-0">
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage:
-                  'url("https://custompatchmakers.ca/wp-content/uploads/2025/10/hero-section-slider-img-4.webp")',
+                backgroundImage: 'url("/images/bg1.webp")',
               }}
             />
-            <div className="absolute inset-0 bg-[#7B1E23]/75" />
-            <div className="absolute inset-0 bg-linear-to-r from-[#7B1E23]/90 via-[#7B1E23]/70 to-[#7B1E23]/40" />
+            <div className="absolute inset-0 bg-[#0B1C48]/55" />
+            <div className="absolute inset-0 bg-linear-to-r from-[#0B1C48]/90 via-[#0B1C48]/88 to-[#0B1C48]/80" />
           </div>
 
           <Container>
@@ -105,7 +109,7 @@ export default function ChenillePatchesPage() {
                 </motion.div>
 
                 <motion.h1
-                  className="mt-[20px] max-w-[600px] text-[32px] font-medium leading-[1.08] tracking-[-0.02em] text-[#FFFFFF] sm:text-[38px] md:text-[44px] lg:text-[36px]"
+                  className="mt-[20px] max-w-[600px] font-[var(--font-poppins)] text-[40px] font-medium leading-[1.08] tracking-[-0.02em] text-[#FFFFFF]"
                   variants={fadeLeft}
                   transition={{ duration: 0.7 }}
                 >

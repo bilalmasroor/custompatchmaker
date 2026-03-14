@@ -313,7 +313,7 @@ export default function EmbroideredVersatileOptions({
       <Container>
         <div className="mx-auto max-w-285">
           <div className="text-center">
-            <h3 className="relative inline-block px-1 text-[28px] font-semibold tracking-wider leading-none text-[#C91A25]">
+            <h3 className="relative inline-block px-1 text-[28px] font-semibold tracking-wider leading-none text-[#0B1C48]">
               Versatile Options
               <motion.svg
                 viewBox="0 0 500 150"
@@ -336,7 +336,7 @@ export default function EmbroideredVersatileOptions({
               </motion.svg>
             </h3>
 
-            <h2 className="mt-6 text-[24px] font-normal leading-[1.15] text-[#7B0F14] sm:text-[28px] lg:text-[32px]">
+            <h2 className="mt-6 font-[var(--font-poppins)] text-[40px] font-medium leading-[1.15] text-[#0B1C48]">
               Custom Patch Styles for Every Purpose
             </h2>
 

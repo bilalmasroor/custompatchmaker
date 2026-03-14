@@ -33,7 +33,7 @@ export default function ServiceStorySplit({
         <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-8 py-12 sm:py-16 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-12 lg:py-20">
           {/* Text content */}
           <div>
-            <h2 className="text-[28px] mb-5 font-medium leading-[1.1] text-white sm:text-[34px] lg:text-[32px]">
+            <h2 className="mb-5 font-[var(--font-poppins)] text-[40px] font-medium leading-[1.1] text-white">
               {title}
             </h2>
 

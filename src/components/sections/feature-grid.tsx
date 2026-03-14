@@ -94,7 +94,7 @@ export default function PatchTypes() {
             </svg>
           </div>
 
-          <h2 className="mt-4 text-[32px] font-bold leading-[1.2] text-[#0B1C48] sm:text-[40px]">
+          <h2 className="mt-4 font-[var(--font-poppins)] text-[40px] font-medium leading-[1.2] text-[#0B1C48]">
             Design Your Own Custom Patches – Fast, Reliable, and High-Quality
           </h2>
 

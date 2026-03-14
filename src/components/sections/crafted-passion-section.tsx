@@ -26,7 +26,7 @@ export default function QualitySection() {
 
       <Container className="relative z-10 text-[#FFFFFF] [&_h2]:text-[#FFFFFF] [&_p]:text-[#FFFFFF]">
         <div className="mx-auto max-w-250 text-center text-[#FFFFFF]">
-          <h2 className="text-[38px] font-semibold leading-[1.1] sm:text-[44px] lg:text-[58px]">
+          <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.1]">
             Crafted with Passion, Made to Last
           </h2>
           <p className="mx-auto mt-4 max-w-200 text-[17px] leading-[1.45] sm:text-[18px] lg:text-[20px]">

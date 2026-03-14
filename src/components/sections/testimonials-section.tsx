@@ -98,7 +98,7 @@ export default function ReviewsSection() {
       <Container>
         <div className="mx-auto max-w-285">
           <div className="text-center">
-            <h2 className="relative inline-block px-1 text-[36px] font-semibold leading-none text-[#8A1116] sm:text-[42px] lg:text-[48px]">
+            <h2 className="relative inline-block px-1 font-[var(--font-poppins)] text-[40px] font-medium leading-none text-[#0B1C48]">
               What Our Customers Say
               <svg
                 viewBox="0 0 500 150"
@@ -128,7 +128,7 @@ export default function ReviewsSection() {
                 </p>
 
                 <div className="mt-auto pt-8">
-                  <h3 className="text-[16px] font-semibold leading-none text-[#8A1116]">{item.name}</h3>
+                  <h3 className="text-[16px] font-semibold leading-none text-[#0B1C48]">{item.name}</h3>
                   <p className="mt-2 text-[14px] leading-none text-[#6B6B6B]">{item.location}</p>
                 </div>
               </article>

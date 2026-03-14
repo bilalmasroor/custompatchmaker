@@ -26,7 +26,7 @@ export default function Quality() {
 
       <Container className="relative z-10 text-[#FFFFFF] [&_h2]:text-[#FFFFFF] [&_p]:text-[#FFFFFF]">
         <div className="mx-auto max-w-250 text-center text-[#FFFFFF]">
-          <h2 className="text-[32px] font-semibold leading-[1.1] sm:text-[40px] lg:text-[48px]">
+              <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.1]">
             Crafted with Passion, Made to Last
           </h2>
           <p className="mx-auto mt-4 max-w-200 text-[15px] leading-[1.45] sm:text-[16px] lg:text-[16px]">

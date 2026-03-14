@@ -44,7 +44,7 @@ export default function PatchCoverageStyles() {
       <Container>
         <div className="mx-auto max-w-[1120px] text-center">
           <div className="relative inline-block px-2">
-            <h3 className="text-[28px] font-semibold tracking-wider leading-none text-[#C91A25]">
+            <h3 className="text-[28px] font-semibold tracking-wider leading-none text-[#0B1C48]">
               Coverage Options
             </h3>
             <motion.svg
@@ -68,7 +68,7 @@ export default function PatchCoverageStyles() {
             </motion.svg>
           </div>
 
-          <h2 className="mt-4 text-[32px] font-medium leading-[1.2] text-[#0B1C48] sm:text-[32px]">
+          <h2 className="mt-4 font-[var(--font-poppins)] text-[40px] font-medium leading-[1.2] text-[#0B1C48]">
             Custom Patch Styles for Every Purpose
           </h2>
 

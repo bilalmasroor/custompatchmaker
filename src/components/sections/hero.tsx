@@ -33,8 +33,8 @@ export default function HeroSection() {
           />
         ))}
 
-        <div className="absolute inset-0 bg-[#0B1C48]/55" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1C48]/90 via-[#0B1C48]/78 to-[#0B1C48]/30" />
+        {/* Naya Overlay: Left side dark aur right side bilkul clear (transparent) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1C48]/95 via-[#0B1C48]/70 to-transparent" />
       </div>
 
       <Container className="max-w-[1440px]">
@@ -45,7 +45,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.25, ease: "easeOut" }}
           >
-            <h1 className="max-w-[700px] text-[40px] font-medium leading-[1.02] tracking-[-0.03em] text-[#FFFFFF] sm:text-[48px] md:text-[56px] lg:text-[40px]">
+            <h1 className="max-w-[700px] font-[var(--font-poppins)] text-[40px] font-medium leading-[1.02] tracking-[-0.03em] text-[#FFFFFF]">
               Premium Custom Patches, Crafted to Perfection.
             </h1>
 

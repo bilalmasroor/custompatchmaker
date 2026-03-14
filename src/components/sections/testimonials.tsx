@@ -129,7 +129,7 @@ export default function Reviews() {
         <div className="mx-auto max-w-285">
           <div className="text-center">
             <div className="relative inline-block px-2">
-              <h3 className="text-[28px] font-semibold tracking-wider leading-none text-[#C91A25]">
+              <h3 className="text-[28px] font-semibold tracking-wider leading-none text-[#0B1C48]">
                 What Our Customers Say
               </h3>
               <motion.svg

@@ -42,7 +42,7 @@ export default function OrderProcess() {
           viewport={{ once: false, amount: 0.4 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="text-[24px] font-semibold leading-none text-[#0B1C48] sm:text-[30px]">Order Process</h2>
+          <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-none text-[#0B1C48]">Order Process</h2>
           <p className="mt-4 text-[12px] font-normal leading-normal text-[#2B2B2B] sm:text-[13px]">
             One Click to Elevate Your Style – Order Now!
           </p>

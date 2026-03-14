@@ -134,7 +134,7 @@ export default function ChenilleBackingBorderOptions() {
           {/* Eyebrow */}
           <div className="text-center">
             <div className="relative inline-block px-2">
-              <h3 className="text-[28px] font-semibold tracking-wider leading-none text-[#C91A25]">
+              <h3 className="text-[28px] font-semibold tracking-wider leading-none text-[#0B1C48]">
                 Chenille Finishing
               </h3>
               <motion.svg
@@ -160,7 +160,7 @@ export default function ChenilleBackingBorderOptions() {
           </div>
 
           {/* Heading */}
-          <h2 className="my-6 text-center text-[28px] font-semibold leading-[1.2] text-[#0B1C48] sm:text-[34px]">
+          <h2 className="my-6 text-center font-[var(--font-poppins)] text-[40px] font-medium leading-[1.2] text-[#0B1C48]">
             Backing and Border Options
           </h2>
 
@@ -224,7 +224,7 @@ export default function ChenilleBackingBorderOptions() {
                   />
                 </div>
 
-                <h4 className="mt-4 text-[22px] font-semibold leading-tight text-[#5A1215] sm:text-[22px]">
+                <h4 className="mt-4 text-[22px] font-semibold leading-tight text-[#0B1C48] sm:text-[22px]">
                   {card.title}
                 </h4>
 

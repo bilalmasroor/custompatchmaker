@@ -20,8 +20,8 @@ export default function Contact() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Side: Text Content */}
           <div className="max-w-xl">
-            <h2 className="text-[32px] font-medium leading-[1.1] text-[#0b1c48]">
-              <span className="relative inline-block pr-2 text-[#C91A25]">
+            <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.1] text-[#0B1C48]">
+              <span className="relative inline-block pr-2 text-[#0B1C48]">
                 Customized Patches
                 <svg
                   viewBox="0 0 500 150"

@@ -56,7 +56,7 @@ export default function Faq() {
       <Container>
         <div className="mx-auto max-w-255">
           <div className="text-center">
-            <h2 className="relative inline-block px-1 text-[28px] font-semibold leading-[1.08] text-[#0B1C48] sm:text-[32px] lg:text-[36px]">
+            <h2 className="relative inline-block px-1 font-[var(--font-poppins)] text-[40px] font-medium leading-[1.08] text-[#0B1C48]">
               Frequently Asked Question
               <svg
                 viewBox="0 0 500 150"
