@@ -2,6 +2,7 @@ import Image from "next/image";
 import SiteFooter from "@/components/sections/site-footer";
 import SiteHeader from "@/components/sections/site-header";
 import Container from "@/components/layout/container";
+import TypewriterBadge from "@/components/typewriter-badge";
 import EmbroideredVersatileOptions from "@/components/sections/embroidered-versatile-options";
 import EmbroideredWhyChoose from "@/components/sections/embroidered-why-choose";
 import ChenilleBackingBorderOptions from "@/components/sections/chenille-backing-border-options";
@@ -17,38 +18,48 @@ export default function ChenillePatchesPage() {
       <SiteHeader />
 
       <main>
-        <section className="overflow-hidden border-b border-[#0B1C48]/15 bg-[#FFFFFF]">
-          <Container>
-            <div className="grid min-h-[640px] items-center gap-10 py-[48px] sm:py-[64px] lg:grid-cols-[minmax(0,640px)_1fr] lg:gap-8 lg:py-[80px]">
-              <div className="max-w-[720px]">
-                <p className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C91A25] sm:text-[15px]">
-                  Custom Chenille Patches
-                </p>
+        <section className="relative isolate overflow-hidden bg-[#7B1E23] text-[#FFFFFF]">
+          {/* Background image from home hero with red overlay */}
+          <div aria-hidden="true" className="absolute inset-0">
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage:
+                  'url("https://custompatchmakers.ca/wp-content/uploads/2025/10/hero-section-slider-img-4.webp")',
+              }}
+            />
+            <div className="absolute inset-0 bg-[#7B1E23]/75" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#7B1E23]/90 via-[#7B1E23]/70 to-[#7B1E23]/40" />
+          </div>
 
-                <h1 className="mt-[18px] max-w-[700px] text-[38px] font-bold leading-[1.02] tracking-[-0.03em] text-[#0B1C48] sm:text-[48px] md:text-[56px] lg:text-[64px]">
-                  Crafted with Texture,
+          <Container>
+            <div className="relative grid min-h-[640px] items-center gap-10 py-[48px] sm:py-[64px] lg:grid-cols-[minmax(0,640px)_1fr] lg:gap-8 lg:py-[80px]">
+              <div className="max-w-[640px]">
+                <TypewriterBadge text="Chenille Patches" />
+
+                <h1 className="mt-[20px] max-w-[600px] text-[34px] font-bold leading-[1.08] tracking-[-0.02em] text-[#FFFFFF] sm:text-[42px] md:text-[50px] lg:text-[56px]">
+                  Custom Chenille Patches
                   <br />
-                  Made to Stand Out
+                  for a Bold Statement
                 </h1>
 
-                <p className="mt-[24px] max-w-[690px] text-[16px] leading-[30px] text-[#2B2B2B] sm:text-[17px]">
-                  Our <strong>custom chenille patches</strong> bring bold texture, rich colour, and a classic varsity
-                  feel to every design. From school emblems and team jackets to fashion statements and branded
-                  merchandise, each piece is crafted to look premium and last.
+                <p className="mt-[24px] text-[15px] font-bold leading-[1.4] text-[#FFFFFF] sm:text-[16px]">
+                  Soft texture, standout designs
                 </p>
-
-                <p className="mt-[18px] max-w-[690px] text-[16px] leading-[30px] text-[#2B2B2B] sm:text-[17px]">
-                  We use high-quality yarns, durable backings, and expert finishing to create chenille patches that
-                  feel soft, wear well, and stand out from a distance. If you want depth, warmth, and impact, this is
-                  the patch style to choose.
+                <p className="mt-[6px] max-w-[600px] text-[15px] leading-[28px] text-[#FFFFFF]/85 sm:text-[16px]">
+                  Our Custom Chenille Patches combine vibrant threads with plush texture, making them a favorite for
+                  varsity jackets, hoodies, and sportswear. Every chenille patch is made to order crafted with
+                  precision, color depth, and durability to keep your logo or artwork looking sharp. Bring your design
+                  to life with soft loops, vivid hues, and high-definition stitching that captures every detail of
+                  your creativity.
                 </p>
 
                 <a
-  href="#"
-  className="mt-[34px] inline-flex min-h-[54px] items-center justify-center rounded-full bg-[#C91A25] px-[30px] text-[15px] font-semibold text-[#FFFFFF] transition-all duration-300 hover:bg-[#C91A25]/90 hover:text-[#FFFFFF]"
->
-  Start Your Order
-</a>
+                  href="#get-a-free-quote"
+                  className="mt-[34px] inline-flex min-h-[54px] items-center justify-center rounded-md border-2 border-[#FFFFFF] bg-[#FFFFFF] px-[30px] text-[15px] font-semibold text-[#C91A25] transition-all duration-300 hover:bg-transparent hover:text-[#FFFFFF]"
+                >
+                  Start Your Order
+                </a>
               </div>
 
               <div className="relative mx-auto w-full max-w-[480px] lg:ml-auto lg:max-w-[520px]">

@@ -135,21 +135,6 @@ export default function HeroSection() {
                 Get A Free Quote
               </a>
             </div>
-
-            <a
-              href="https://www.trustpilot.com/review/custompatchmakers.ca"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-[32px] inline-flex"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://custompatchmakers.ca/wp-content/uploads/2026/02/368-3686309_5-star-customer-feedback-trustpilot-logo-hd-png-removebg-preview.png"
-                alt="Trustpilot 5-star rating"
-                loading="lazy"
-                className="h-auto w-[210px] sm:w-[240px] md:w-[268px]"
-              />
-            </a>
           </motion.div>
 
           <div className="hidden lg:block" />
