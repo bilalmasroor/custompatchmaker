@@ -26,10 +26,10 @@ export default function Quality() {
 
       <Container className="relative z-10 text-[#FFFFFF] [&_h2]:text-[#FFFFFF] [&_p]:text-[#FFFFFF]">
         <div className="mx-auto max-w-250 text-center text-[#FFFFFF]">
-          <h2 className="text-[38px] font-semibold leading-[1.1] sm:text-[44px] lg:text-[58px]">
+          <h2 className="text-[32px] font-semibold leading-[1.1] sm:text-[40px] lg:text-[48px]">
             Crafted with Passion, Made to Last
           </h2>
-          <p className="mx-auto mt-4 max-w-200 text-[17px] leading-[1.45] sm:text-[18px] lg:text-[20px]">
+          <p className="mx-auto mt-4 max-w-200 text-[15px] leading-[1.45] sm:text-[16px] lg:text-[16px]">
             We’re here to help you create patches that truly reflect your vision, whether it’s for jackets, uniforms,
             hats, or any custom gear. Every design we produce is built on quality, creativity, and attention to
             detail.
@@ -45,7 +45,7 @@ export default function Quality() {
               <div className="rounded-full bg-[#F2B705]">
                 <CheckCircleIcon />
               </div>
-              <p className="text-[17px] leading-[1.3] sm:text-[18px] lg:text-[19px]">{point}</p>
+              <p className="text-[15px] leading-[1.3] sm:text-[16px]">{point}</p>
             </div>
           ))}
         </div>

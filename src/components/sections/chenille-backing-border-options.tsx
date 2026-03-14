@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Container from "../layout/container";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type OptionCard = {
   title: string;
@@ -133,25 +134,33 @@ export default function ChenilleBackingBorderOptions() {
           {/* Eyebrow */}
           <div className="text-center">
             <div className="relative inline-block px-2">
-              <h3 className="text-[14px] font-semibold tracking-wider uppercase leading-none text-[#C91A25]">
+              <h3 className="text-[28px] font-semibold tracking-wider leading-none text-[#C91A25]">
                 Chenille Finishing
               </h3>
-              <svg
+              <motion.svg
                 viewBox="0 0 500 150"
                 preserveAspectRatio="none"
                 aria-hidden="true"
-                className="mt-1 h-2.5 w-full fill-none stroke-[#F2B705]"
+                className="absolute -bottom-2 left-0 h-3 w-full fill-none stroke-[#C91A25]"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 1 }}
               >
-                <path
+                <motion.path
                   d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"
-                  strokeWidth="16"
+                  strokeWidth="12"
+                  variants={{
+                    hidden: { pathLength: 0, opacity: 0 },
+                    visible: { pathLength: 1, opacity: 1 },
+                  }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
                 />
-              </svg>
+              </motion.svg>
             </div>
           </div>
 
           {/* Heading */}
-          <h2 className="mt-3 text-center text-[28px] font-bold italic leading-[1.2] text-[#0B1C48] sm:text-[34px]">
+          <h2 className="my-6 text-center text-[28px] font-semibold leading-[1.2] text-[#0B1C48] sm:text-[34px]">
             Backing and Border Options
           </h2>
 
@@ -172,10 +181,10 @@ export default function ChenilleBackingBorderOptions() {
                   id={tabId}
                   type="button"
                   onClick={() => setActiveTabKey(tab.key)}
-                  className={`inline-flex min-h-[44px] items-center justify-center border px-6 text-center text-[13px] font-medium leading-none transition-colors sm:min-w-[180px] sm:text-[14px] ${
+                  className={`inline-flex min-h-[55px] items-center justify-center border px-6 text-center text-[16px] font-sans leading-none transition-colors sm:min-w-[180px] sm:text-[16px] ${
                     isActive
-                      ? "border-[#5A1215] bg-[#5A1215] text-white"
-                      : "border-[#D1D5DB] bg-white text-[#7B0F14] hover:bg-[#F9FAFB]"
+                      ? "border-[#5A1215] bg-[#7B1E23] text-white"
+                      : "border-transparent text-[#7B0F14] hover:bg-[#F9FAFB]"
                   }`}
                   role="tab"
                   aria-selected={isActive}
@@ -188,7 +197,7 @@ export default function ChenilleBackingBorderOptions() {
           </div>
 
           {/* Description */}
-          <p className="mx-auto mt-5 max-w-2xl text-center text-[13px] leading-relaxed text-[#2B2B2B] sm:text-[14px]">
+          <p className="mx-auto mt-5 max-w-2xl text-center text-[16px] leading-relaxed text-[#2B2B2B] sm:text-[16px]">
             {activeTab.description}
           </p>
 
@@ -215,7 +224,7 @@ export default function ChenilleBackingBorderOptions() {
                   />
                 </div>
 
-                <h4 className="mt-4 text-[16px] font-bold italic leading-tight text-[#5A1215] sm:text-[18px]">
+                <h4 className="mt-4 text-[22px] font-semibold leading-tight text-[#5A1215] sm:text-[22px]">
                   {card.title}
                 </h4>
 

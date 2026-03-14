@@ -161,13 +161,13 @@ function StyleRow({
     >
       <StarOfLifeIcon active={active} />
       <h4
-        className={`mt-4 text-[34px] font-semibold leading-[1.2] transition-colors duration-300 group-hover:text-[#E31B23] sm:text-[42px] ${
+        className={`mt-4 text-[22px] font-semibold leading-[1.2] transition-colors duration-300 group-hover:text-[#E31B23] sm:text-[24px] ${
           active ? "text-[#E31B23]" : "text-[#7B0F14]"
         }`}
       >
         {item.title}
       </h4>
-      <p className="mt-4 max-w-130 text-[18px] leading-normal text-[#111111] sm:text-[20px]">
+      <p className="mt-4 max-w-130 text-[18px] leading-normal text-[#111111] sm:text-[16px]">
         {item.description}
       </p>
     </motion.article>
@@ -313,7 +313,7 @@ export default function EmbroideredVersatileOptions({
       <Container>
         <div className="mx-auto max-w-285">
           <div className="text-center">
-            <h3 className="relative inline-block px-1 text-[41px] font-semibold leading-none text-[#E31B23] sm:text-[44px]">
+            <h3 className="relative inline-block px-1 text-[28px] font-semibold tracking-wider leading-none text-[#C91A25]">
               Versatile Options
               <motion.svg
                 viewBox="0 0 500 150"
@@ -336,7 +336,7 @@ export default function EmbroideredVersatileOptions({
               </motion.svg>
             </h3>
 
-            <h2 className="mt-6 text-[32px] font-normal leading-[1.15] text-[#7B0F14] sm:text-[38px]">
+            <h2 className="mt-6 text-[24px] font-normal leading-[1.15] text-[#7B0F14] sm:text-[28px] lg:text-[32px]">
               Custom Patch Styles for Every Purpose
             </h2>
 
@@ -346,7 +346,10 @@ export default function EmbroideredVersatileOptions({
             </p>
           </div>
 
-          <div ref={timelineRef} className="relative mx-auto mt-12 max-w-280 space-y-10 lg:space-y-14">
+          <div
+            ref={timelineRef}
+            className="relative mx-auto mt-12 max-w-280 space-y-10 lg:space-y-14"
+          >
             {/* Dotted track line */}
             <div className="pointer-events-none absolute left-1/2 top-2 z-0 hidden h-[calc(100%-1rem)] -translate-x-1/2 border-l-2 border-dotted border-[#E31B23]/30 lg:block" />
 

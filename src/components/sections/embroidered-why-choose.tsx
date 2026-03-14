@@ -142,7 +142,7 @@ export default function EmbroideredWhyChoose() {
           {/* Content */}
           <div>
             <motion.h2
-              className="text-[32px] font-bold leading-[1.1] text-white sm:text-[40px] lg:text-[48px]"
+              className="text-[28px] font-medium leading-[1.1] text-white sm:text-[32px] lg:text-[32px]"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}

@@ -14,7 +14,7 @@ export default function TypewriterBadge({ text }: { text: string }) {
   }, [visibleCount, text.length]);
 
   return (
-    <span className="inline-flex items-center rounded-full border border-[#FFFFFF]/30 px-[20px] py-[8px] text-[14px] font-semibold tracking-[0.06em] text-[#FFFFFF] sm:text-[15px]">
+    <span className="inline-flex items-center rounded-full border border-[#FFFFFF]/30 px-[20px] py-[8px] text-[14px] tracking-[0.06em] text-[#FFFFFF] sm:text-[15px]">
       <span aria-label={text}>{text.slice(0, visibleCount)}</span>
     </span>
   );

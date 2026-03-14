@@ -78,9 +78,9 @@ export default function PatchTypes() {
       <Container>
         <div className="mx-auto mb-12 max-w-4xl text-center">
           <div className="relative inline-block px-2">
-            <h3 className="text-[14px] font-semibold tracking-wider uppercase leading-none text-[#0b1c48]">
+            <span className="text-[14px] font-semibold tracking-wider uppercase leading-none text-[#0b1c48]">
               Type of Patches Available!
-            </h3>
+            </span>
             <svg
               viewBox="0 0 500 150"
               preserveAspectRatio="none"

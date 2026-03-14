@@ -23,12 +23,12 @@ export default function HighlightsStrip() {
             transition={{ duration: 1.05, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="max-w-65">
-              <h2 className="!text-[28px] font-semibold leading-[1.06] text-[#0b1c48] sm:!text-[28px] lg:!text-[28px]">
+              <h2 className="text-[28px] font-semibold leading-[1.06] text-[#0b1c48]">
                 Customize Your
                 <br />
                 Perfect Patch
               </h2>
-              <p className="mt-3 text-[22px] font-normal leading-[1.2] text-[#0b1c48] sm:text-[23px] lg:text-[24px]">
+              <p className="mt-3 text-[16px] font-normal leading-[1.2] text-[#0b1c48]">
                 Any Shape, Any Backing
               </p>
             </div>
@@ -52,12 +52,12 @@ export default function HighlightsStrip() {
             transition={{ duration: 1.05, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
           >
             <div className="max-w-66.25">
-              <h2 className="!text-[28px] font-semibold leading-[1.06] text-[#0b1c48] sm:!text-[28px] lg:!text-[28px]">
+              <h2 className="text-[28px] font-semibold leading-[1.06] text-[#0b1c48]">
                 Design Your Own
                 <br />
                 Custom Patches
               </h2>
-              <p className="mt-3 text-[22px] font-normal leading-[1.2] text-[#0b1c48] sm:text-[23px] lg:text-[24px]">
+              <p className="mt-3 text-[16px] font-normal leading-[1.2] text-[#0b1c48]">
                 Unique, Creative, Durable
               </p>
             </div>
