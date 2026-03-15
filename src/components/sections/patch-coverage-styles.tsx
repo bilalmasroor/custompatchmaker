@@ -52,18 +52,13 @@ export default function PatchCoverageStyles() {
               preserveAspectRatio="none"
               aria-hidden="true"
               className="absolute -bottom-2 left-0 h-3 w-full fill-none stroke-[#C91A25]"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 1 }}
             >
               <motion.path
                 d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"
                 strokeWidth="12"
-                variants={{
-                  hidden: { pathLength: 0, opacity: 0 },
-                  visible: { pathLength: 1, opacity: 1 },
-                }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                initial={{ pathLength: 0, opacity: 1 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 1.6, ease: "easeOut", repeat: Infinity, repeatType: "loop", repeatDelay: 0.6 }}
               />
             </motion.svg>
           </div>

@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Container from "../layout/container";
 
 function PhoneIcon() {
@@ -23,17 +26,20 @@ export default function Contact() {
             <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.1] text-[#0B1C48]">
               <span className="relative inline-block pr-2 text-[#0B1C48]">
                 Customized Patches
-                <svg
+                <motion.svg
                   viewBox="0 0 500 150"
                   preserveAspectRatio="none"
                   aria-hidden="true"
-                  className="absolute -bottom-2 left-0 h-4 w-[102%] fill-none stroke-[#F2B705]"
+                  className="absolute -bottom-2 left-0 h-4 w-[102%] fill-none stroke-[#C91A25]"
                 >
-                  <path
+                  <motion.path
                     d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"
                     strokeWidth="12"
+                    initial={{ pathLength: 0, opacity: 1 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ duration: 1.6, ease: "easeOut", repeat: Infinity, repeatType: "loop", repeatDelay: 0.6 }}
                   />
-                </svg>
+                </motion.svg>
               </span>
               <br />
               For Every Style
