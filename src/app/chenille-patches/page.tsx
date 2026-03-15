@@ -221,7 +221,7 @@ export default function ChenillePatchesPage() {
             ]}
             buttonText="Start Your Order"
             buttonHref="#"
-            backgroundImageSrc="/images/chenille/Simpson.png"
+            backgroundImageSrc="/images/bg2.png"
           />
         </motion.div>
 
@@ -257,7 +257,7 @@ export default function ChenillePatchesPage() {
           ]}
           imageSrc="https://custompatchmakers.ca/wp-content/uploads/2025/11/chenille_patches-lettercustom-copyrighted-removebg-preview.png"
           imageAlt="Custom chenille patch collage"
-          backgroundImageSrc="/images/chenille/Simpson.png"
+          backgroundImageSrc="/images/bg2.png"
         />
 
         {/* Reviews — fade up */}

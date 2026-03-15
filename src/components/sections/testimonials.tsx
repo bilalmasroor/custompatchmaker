@@ -160,15 +160,23 @@ export default function Reviews() {
               <motion.div
                 key={startIndex}
                 custom={direction}
-                initial={(dir: number) => ({
-                  x: dir >= 0 ? slideX : -slideX,
-                  opacity: 0,
-                })}
-                animate={{ x: 0, opacity: 1 }}
-                exit={(dir: number) => ({
-                  x: dir >= 0 ? -slideX : slideX,
-                  opacity: 0,
-                })}
+                variants={{
+                  enter: (dir: number) => ({
+                    x: dir >= 0 ? slideX : -slideX,
+                    opacity: 0,
+                  }),
+                  center: {
+                    x: 0,
+                    opacity: 1,
+                  },
+                  exit: (dir: number) => ({
+                    x: dir >= 0 ? -slideX : slideX,
+                    opacity: 0,
+                  }),
+                }}
+                initial="enter"
+                animate="center"
+                exit="exit"
                 transition={{
                   x: { type: "spring", stiffness: 300, damping: 30 },
                   opacity: { duration: 0.25 },

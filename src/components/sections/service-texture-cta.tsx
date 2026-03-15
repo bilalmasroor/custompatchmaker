@@ -32,7 +32,7 @@ export default function ServiceTextureCta({
       <Container className="relative z-10 text-[#FFFFFF] [&_h2]:text-[#FFFFFF] [&_p]:text-[#FFFFFF] [&_strong]:text-[#FFFFFF]">
         <div className="mx-auto max-w-250 text-center text-[#FFFFFF]">
           <div className="relative inline-block px-2">
-            <h3 className="text-[28px] font-semibold tracking-wider leading-none text-[#0B1C48]">
+            <h3 className="text-[28px] font-semibold tracking-wider leading-none text-[#FFFFFF]">
               {eyebrow}
             </h3>
             <motion.svg
