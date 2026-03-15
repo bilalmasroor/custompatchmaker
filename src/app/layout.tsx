@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Plus_Jakarta_Sans, Poppins } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Noto_Serif,
+  Plus_Jakarta_Sans,
+  Poppins,
+  PT_Serif,
+} from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,6 +31,19 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const notoSerif = Noto_Serif({
+  variable: "--font-noto-serif",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const ptSerif = PT_Serif({
+  variable: "--font-pt-serif",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
   title: "Custom Patch Maker Clone",
   description: "Responsive placeholder-based clone scaffold",
@@ -37,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${plusJakartaSans.variable} ${poppins.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${plusJakartaSans.variable} ${poppins.variable} ${notoSerif.variable} ${ptSerif.variable} antialiased`}
       >
         {children}
       </body>

@@ -1,7 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Container from "../layout/container";
+import Image from "next/image";
 
 type Testimonial = {
   quote: string;
@@ -42,24 +45,40 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-function ArrowLeftIcon() {
+function TestimonialCard({ item }: { item: Testimonial }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 448 512" className="h-4 w-4 fill-current">
-      <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
-    </svg>
-  );
-}
+    <article className="flex h-full w-full flex-col rounded-[10px] bg-[#F2F2F2] px-10 pb-8 pt-9">
+      <Image
+        width={100}
+        height={100}
+        src="https://custompatchmakers.ca/wp-content/uploads/2025/10/Group-269-1.png"
+        alt="Quote"
+        className="h-11.25 w-15.25 object-contain"
+        style={{
+          filter:
+            "brightness(0) saturate(100%) invert(12%) sepia(95%) saturate(5000%) hue-rotate(348deg) brightness(90%) contrast(100%)",
+        }}
+      />
 
-function ArrowRightIcon() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 448 512" className="h-4 w-4 fill-current">
-      <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
-    </svg>
+      <p className="mt-5 text-[15px] italic leading-[1.45] text-[#1F1F1F]">
+        &ldquo;{item.quote}&rdquo;
+      </p>
+
+      <div className="mt-auto pt-8">
+        <h3 className="text-[16px] font-semibold leading-none text-[#0b1c48]">
+          {item.name}
+        </h3>
+        <p className="mt-2 text-[14px] leading-none text-[#6B6B6B]">
+          {item.location}
+        </p>
+      </div>
+    </article>
   );
 }
 
 export default function Reviews() {
   const [startIndex, setStartIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // -1 = prev, 1 = next
   const [cardsPerView, setCardsPerView] = useState(3);
 
   useEffect(() => {
@@ -75,82 +94,115 @@ export default function Reviews() {
 
     updateCardsPerView();
     window.addEventListener("resize", updateCardsPerView);
-
     return () => window.removeEventListener("resize", updateCardsPerView);
   }, []);
 
-  const visibleTestimonials = useMemo(() => {
-    return Array.from({ length: cardsPerView }, (_, index) => {
-      return testimonials[(startIndex + index) % testimonials.length];
-    });
-  }, [cardsPerView, startIndex]);
+  const getVisible = useCallback(
+    (from: number) =>
+      Array.from({ length: cardsPerView }, (_, i) => ({
+        index: (from + i) % testimonials.length,
+        item: testimonials[(from + i) % testimonials.length],
+      })),
+    [cardsPerView],
+  );
 
   const onPrev = () => {
-    setStartIndex((current) => (current - 1 + testimonials.length) % testimonials.length);
+    setDirection(-1);
+    setStartIndex(
+      (current) => (current - 1 + testimonials.length) % testimonials.length,
+    );
   };
 
   const onNext = () => {
+    setDirection(1);
     setStartIndex((current) => (current + 1) % testimonials.length);
   };
+
+  const visible = getVisible(startIndex);
+
+  // Slide amount per card
+  const slideX = 340;
 
   return (
     <section className="border-b border-[#d6d6d6] bg-[#E6E6E6] py-14 sm:py-16 lg:py-18">
       <Container>
         <div className="mx-auto max-w-285">
           <div className="text-center">
-            <h2 className="relative inline-block px-1 text-[36px] font-semibold leading-none text-[#0b1c48] sm:text-[42px] lg:text-[48px]">
-              What Our Customers Say
-              <svg
+            <div className="relative inline-block px-2">
+              <h3 className="text-[28px] font-semibold tracking-wider leading-none text-[#0B1C48]">
+                What Our Customers Say
+              </h3>
+              <motion.svg
                 viewBox="0 0 500 150"
                 preserveAspectRatio="none"
                 aria-hidden="true"
                 className="absolute -bottom-2 left-0 h-3 w-full fill-none stroke-[#C91A25]"
               >
-                <path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" strokeWidth="12" />
-              </svg>
-            </h2>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 justify-items-center gap-2.5 md:grid-cols-2 lg:grid-cols-3">
-            {visibleTestimonials.map((item, index) => (
-              <article
-                key={`${item.name}-${index}`}
-                className="flex min-h-102 w-full max-w-90 flex-col rounded-[10px] bg-[#F2F2F2] px-10 pb-8 pt-9"
-              >
-                <img
-                  src="https://custompatchmakers.ca/wp-content/uploads/2025/10/Group-269-1.png"
-                  alt="Quote"
-                  className="h-11.25 w-15.25 object-contain"
+                <motion.path
+                  d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"
+                  strokeWidth="12"
+                  initial={{ pathLength: 0, opacity: 1 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 1.6, ease: "easeOut", repeat: Infinity, repeatType: "loop", repeatDelay: 0.6 }}
                 />
-
-                <p className="mt-5 text-[15px] italic leading-[1.45] text-[#1F1F1F]">
-                  “{item.quote}”
-                </p>
-
-                <div className="mt-auto pt-8">
-                  <h3 className="text-[16px] font-semibold leading-none text-[#0b1c48]">{item.name}</h3>
-                  <p className="mt-2 text-[14px] leading-none text-[#6B6B6B]">{item.location}</p>
-                </div>
-              </article>
-            ))}
+              </motion.svg>
+            </div>
           </div>
 
-          <div className="mt-10 flex items-center justify-center gap-3">
+          {/* Carousel */}
+          <div className="relative mt-10 overflow-hidden">
+            <AnimatePresence mode="popLayout" initial={false} custom={direction}>
+              <motion.div
+                key={startIndex}
+                custom={direction}
+                variants={{
+                  enter: (dir: number) => ({
+                    x: dir >= 0 ? slideX : -slideX,
+                    opacity: 0,
+                  }),
+                  center: {
+                    x: 0,
+                    opacity: 1,
+                  },
+                  exit: (dir: number) => ({
+                    x: dir >= 0 ? -slideX : slideX,
+                    opacity: 0,
+                  }),
+                }}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.25 },
+                }}
+                className="grid grid-cols-1 justify-items-center gap-5 md:grid-cols-2 lg:grid-cols-3"
+              >
+                {visible.map(({ index, item }) => (
+                  <div key={index} className="min-h-[380px] w-full max-w-90">
+                    <TestimonialCard item={item} />
+                  </div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <div className="mt-10 flex items-center justify-center gap-4">
             <button
               type="button"
               onClick={onPrev}
               aria-label="Previous testimonial"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#0b1c48] text-[#C91A25] transition-colors hover:bg-[#C91A25] hover:text-[#FFFFFF]"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#991B1B] text-[#991B1B] transition-colors hover:bg-[#991B1B] hover:text-white"
             >
-              <ArrowLeftIcon />
+              <ArrowLeft className="h-5 w-5" strokeWidth={2.5} />
             </button>
             <button
               type="button"
               onClick={onNext}
               aria-label="Next testimonial"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#0b1c48] text-[#C91A25] transition-colors hover:bg-[#C91A25] hover:text-[#FFFFFF]"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#991B1B] text-[#991B1B] transition-colors hover:bg-[#991B1B] hover:text-white"
             >
-              <ArrowRightIcon />
+              <ArrowRight className="h-5 w-5" strokeWidth={2.5} />
             </button>
           </div>
         </div>

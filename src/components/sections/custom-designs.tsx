@@ -41,7 +41,7 @@ export default function CustomDesigns() {
                 />
                 <div className="flex items-center justify-between gap-3 p-4">
                   <div>
-                    <h3 className="text-[14px] font-semibold leading-tight text-[#C91A25] sm:text-[15px]">
+                    <h3 className="text-[14px] font-semibold leading-tight text-[#0B1C48] sm:text-[15px]">
                       {card.label}
                     </h3>
                     <p className="mt-1 text-[13px] font-semibold leading-snug text-[#1A1A1A] sm:text-[14px]">

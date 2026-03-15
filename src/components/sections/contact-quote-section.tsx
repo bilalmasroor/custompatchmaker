@@ -14,8 +14,8 @@ export default function ContactSection() {
       <Container>
         <div className="mx-auto grid max-w-268 grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1.25fr_0.8fr] lg:gap-9">
           <div className="max-w-120">
-            <h2 className="text-[32px] font-semibold leading-[1.08] text-[#0B1C48] sm:text-[38px] lg:text-[46px]">
-              <span className="relative inline-block pr-1 text-[#C91A25]">
+            <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.08] text-[#0B1C48]">
+              <span className="relative inline-block pr-1 text-[#0B1C48]">
                 Customized Patches
                 <svg
                   viewBox="0 0 500 150"

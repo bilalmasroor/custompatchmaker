@@ -13,7 +13,7 @@ export default function CollectionSection() {
 
           <div className="mt-6 grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-8">
             <div className="lg:pr-6">
-              <h2 className="text-[30px] font-semibold leading-[1.06] text-[#0B1C48] sm:text-[36px] lg:text-[52px]">
+              <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.06] text-[#0B1C48]">
                 Customized Patches for Every Style, Explore Our Collection
               </h2>
 
@@ -38,7 +38,7 @@ export default function CollectionSection() {
             </div>
 
             <div className="lg:border-l lg:border-[#C91A25] lg:pl-7">
-              <h2 className="text-[30px] font-semibold leading-[1.06] text-[#0B1C48] sm:text-[36px] lg:text-[52px]">
+              <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.06] text-[#0B1C48]">
                 Can’t Find the Right Product?
               </h2>
 

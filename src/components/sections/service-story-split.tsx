@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Container from "../layout/container";
+import Image from "next/image";
 
 type ServiceStorySplitSectionProps = {
   title: string;
@@ -19,33 +20,43 @@ export default function ServiceStorySplit({
   backgroundImageSrc,
 }: ServiceStorySplitSectionProps) {
   return (
-    <section className="border-b border-[#0B1C48]/15 bg-[#F4F6F8] py-8 sm:py-10 lg:py-12">
+    <section className="relative isolate overflow-hidden">
+      {/* Fixed background image with blue overlay */}
+      <div
+        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{ backgroundImage: `url(${backgroundImageSrc})` }}
+      />
+      <div className="absolute inset-0 -z-10 bg-[#0B1C48]/55" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B1C48]/85 via-[#0B1C48]/70 to-[#0B1C48]/40" />
+
       <Container>
-        <div className="mx-auto grid max-w-268 grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_440px] lg:gap-10">
-          <div className="max-w-177.5">
-            <h2 className="text-[32px] font-semibold leading-[1.08] text-[#0B1C48] sm:text-[38px] lg:text-[50px]">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-8 py-12 sm:py-16 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-12 lg:py-20">
+          {/* Text content */}
+          <div>
+            <h2 className="mb-5 font-[var(--font-poppins)] text-[40px] font-medium leading-[1.1] text-white">
               {title}
             </h2>
 
-            <h3 className="mt-4 text-[22px] font-semibold leading-[1.2] text-[#C91A25] sm:text-[26px] lg:text-[30px]">
+            <h3 className="mt-3 text-[17px] font-medium italic leading-[1.3] text-white/90 sm:text-[19px] lg:text-[22px]">
               {subtitle}
             </h3>
 
-            <div className="mt-5 space-y-4 text-[14px] leading-[1.45] text-[#2B2B2B] sm:text-[15px] lg:text-[16px]">
+            <div className="mt-6 space-y-5 text-[14px] leading-[1.7] text-white/80 sm:text-[15px] lg:text-[16px]">
               {paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
           </div>
 
-          <div className="mx-auto w-full max-w-[440px] lg:ml-auto">
-            <img
+          {/* Patch collage image */}
+          <div className="mx-auto w-full max-w-[420px] lg:ml-auto">
+            <Image
               src={imageSrc}
               alt={imageAlt}
               loading="lazy"
-              width={434}
-              height={339}
-              className="h-auto w-full object-contain"
+              width={420}
+              height={340}
+              className="h-auto w-full object-contain drop-shadow-2xl"
             />
           </div>
         </div>

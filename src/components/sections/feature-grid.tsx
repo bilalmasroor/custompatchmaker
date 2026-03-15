@@ -9,53 +9,53 @@ const patchCards = [
     title: "Embroidered Patches",
     description: "If you want something strong and sturdy but with a 3D design, then go for our PVC emblems",
     href: "/embroidered-patches/",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2025/10/8.webp",
+    image: "/images/home/emb-1.png",
     alt: "Embroidered Patches",
   },
   {
     title: "Iron-On Patches",
     description: "Quick application, ideal for clothing and accessories",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2025/10/3-1.webp",
+    image: "/images/home/iron-1.png",
     alt: "Iron-on Patches",
   },
   {
     title: "Military Patches",
     description: "Crafted to honour courage, unity, and the proud legacy of those who serve.",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2025/10/images-1.jpg",
+    image: "/images/home/military-1.png",
     alt: "Military Patches",
   },
   {
     title: "Woven Patches",
     description: "Detailed, lightweight, and great for intricate designs",
     href: "/woven-patches/",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2025/10/Woven-Patch.webp",
+    image: "/images/home/wov-1.png",
     alt: "Woven Patches",
   },
   {
     title: "Chenille Patches",
     description: "Soft, textured, and often used for varsity jackets or letterman styles",
     href: "/chenille-patches/",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2025/10/Chenille-patches.avif",
+    image: "/images/home/che-1.png",
     alt: "Chenille Patches",
   },
   {
     title: "Leather Patches",
     description: "Stylish and premium, great for hats, bags, or denim",
     href: "#",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2025/10/Leather-patches.webp",
+    image: "/images/home/lea-1.png",
     alt: "Leather Patches",
   },
   {
     title: "PVC Patches",
     description: "Weather-resistant, flexible, and perfect for tactical or outdoor gear",
     href: "#",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2025/10/PVC-patches-1.webp",
+    image: "/images/home/pvc-1.png",
     alt: "PVC Patches",
   },
   {
     title: "Velcro-Backed Patches",
     description: "Easy to attach, remove, and reuse",
-    image: "https://custompatchmakers.ca/wp-content/uploads/2025/10/Velcro-backed-patches.jpg",
+    image: "/images/home/velcro-1.png",
     alt: "Velcro-Backed Patches",
   },
   {
@@ -78,9 +78,9 @@ export default function PatchTypes() {
       <Container>
         <div className="mx-auto mb-12 max-w-4xl text-center">
           <div className="relative inline-block px-2">
-            <h3 className="text-[14px] font-semibold tracking-wider uppercase leading-none text-[#0b1c48]">
+            <span className="text-[14px] font-semibold tracking-wider uppercase leading-none text-[#0b1c48]">
               Type of Patches Available!
-            </h3>
+            </span>
             <svg
               viewBox="0 0 500 150"
               preserveAspectRatio="none"
@@ -94,7 +94,7 @@ export default function PatchTypes() {
             </svg>
           </div>
 
-          <h2 className="mt-4 text-[32px] font-bold leading-[1.2] text-[#0B1C48] sm:text-[40px]">
+          <h2 className="mt-4 font-[var(--font-poppins)] text-[40px] font-medium leading-[1.2] text-[#0B1C48]">
             Design Your Own Custom Patches – Fast, Reliable, and High-Quality
           </h2>
 

@@ -42,7 +42,7 @@ export default function OrderProcess() {
           viewport={{ once: false, amount: 0.4 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="text-[24px] font-semibold leading-none text-[#0B1C48] sm:text-[30px]">Order Process</h2>
+          <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-none text-[#0B1C48]">Order Process</h2>
           <p className="mt-4 text-[12px] font-normal leading-normal text-[#2B2B2B] sm:text-[13px]">
             One Click to Elevate Your Style – Order Now!
           </p>
@@ -69,7 +69,7 @@ export default function OrderProcess() {
                 height={200}
                 className="mx-auto h-50 w-50 object-contain sm:h-50 sm:w-50 lg:h-50 lg:w-40"
               />
-              <h4 className="mt-6 text-[14px] font-semibold leading-[1.2] text-[#0b1c48] sm:text-[20px]">{step.title}</h4>
+              <h4 className="mt-6 text-[18px] font-semibold leading-[1.2] text-[#0b1c48] sm:text-[20px]">{step.title}</h4>
               <p className="mx-auto mt-3 max-w-66.25 text-[11px] leading-[1.45] text-[#2B2B2B] sm:text-[12px]">
                 {step.description}
               </p>

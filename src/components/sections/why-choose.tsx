@@ -26,7 +26,7 @@ export default function WhyChoose() {
             viewport={{ once: false, amount: 0.35 }}
             transition={{ duration: 2.3, ease: [0.12, 0.9, 0.25, 1] }}
           >
-            <h2 className="text-[32px] font-semibold leading-[1.08] text-[#0B1C48] sm:text-[38px] lg:text-[50px]">
+            <h2 className="font-[var(--font-poppins)] text-[40px] font-medium leading-[1.08] text-[#0B1C48]">
               Why Choose Custom
               <br />
               Patch Makers?

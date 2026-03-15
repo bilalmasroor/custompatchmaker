@@ -25,7 +25,7 @@ export default function EmbroideredPatchesPage() {
                   Custom Embroidered Patches
                 </p>
 
-                <h1 className="mt-5 text-[38px] font-bold leading-[1.04] tracking-[-0.02em] text-[#FFFFFF] sm:text-[50px] lg:text-[54px]">
+                  <h1 className="mt-5 font-[var(--font-poppins)] text-[40px] font-medium leading-[1.04] tracking-[-0.02em] text-[#FFFFFF]">
                   Crafted with Detail,
                   <br />
                   Designed to Impress
